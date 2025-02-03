@@ -124,17 +124,28 @@
   // binding correction 4mm, eq. BCOR in tudscr for LaTeX
   let BCOR = 4mm
 
-  set page(
-    paper: "a4",
-    binding: left,
-    margin: (
+  let margins = {
+    if print-mode {
+      (
+        top: K,
+        bottom: MB,
+        inside: T + BCOR,
+        outside: 25mm,
+      )
+    } else {
+      (
         top: K,
         bottom: MB,
         left: T + BCOR,
         right: 20mm,
-        // inside: (100% - 4mm) / 9 + 4mm,
-        // outside: (100% - 4mm)/ 9 * 2
-    ),
+      )
+    }
+  }
+
+  set page(
+    paper: "a4",
+    binding: left,
+    margin: margins,
     // header: none, // TODO: show current chapter title
     number-align: center + bottom,
     numbering: "1",

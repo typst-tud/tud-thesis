@@ -28,7 +28,7 @@
 
   cdfont: true,
   draft-mode: false,
-  print-mode: true,
+  print-mode: false,
   debug-mode: false,
 )
 
