@@ -504,7 +504,7 @@
     )
     strong(it)
   }
-  outline(indent: true)
+  outline(indent: auto)
   pagebreak(weak: true)
 
   empty-page(insert: print-mode)
