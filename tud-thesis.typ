@@ -199,6 +199,9 @@
     ]
   }
 
+  // quotes
+  show quote: set text(style: "italic")
+
   // list indentation
   set enum(indent: 1em)
   set list(indent: 1em)
